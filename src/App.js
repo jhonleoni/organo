@@ -53,19 +53,23 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoMembroCadastrado={
-        membro => AoNovoMembroAdicionado(membro)}
+      <Formulario times={times.map(time => time.nome)} 
+                  aoMembroCadastrado={
+                  membro => AoNovoMembroAdicionado(membro)}
       />
 
       {times.map(time => 
-      <Time key={time.nome} 
+      <Time 
+            key={time.nome} 
             nome={time.nome} 
             corPrimaria={time.corPrimaria} 
             corSecundaria={time.corSecundaria}
+            membros={membros.filter(membro => 
+                             membro.time === time.nome)}
       />)}
 
     </div>
   );
-} 
+}
 
 export default App;
