@@ -10,7 +10,9 @@ const Time = (props) => {
         <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
         <div className='membros'>
         {props.membros.map( membro => 
-                            <Membro key={membro.nome} nome={membro.nome} 
+                            <Membro corDeFundo={props.corPrimaria}
+                                    key={membro.nome} 
+                                    nome={membro.nome} 
                                     cargo={membro.cargo} 
                                     imagem={membro.imagem} 
                             /> )}

@@ -1,8 +1,8 @@
 import './membro.css'
 
-const Membro = ({ nome, imagem, cargo }) => {
+const Membro = ({ nome, imagem, cargo, corDeFundo }) => {
     return (<div className='membro'>
-        <div className='cabecalho'>
+        <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
             <img src={imagem} 
                  alt={nome} />
         </div>
